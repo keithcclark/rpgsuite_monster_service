@@ -1,0 +1,47 @@
+Name		       
+*Strength
+&Dexterity
+$Constitution
+#Intelligence
+@Wisdom
+!Charisma
+!Charisma save prof
+Armor Class
+Hit Points
+Hit Dice
+Image
+?Legendary Points
+****Relationship
+Many-One  Armor_Class_Type
+Many-One Challenge Rating
+	      |_XP
+Many-One  Type
+	      |_Sub-Type
+Many-One  Alignment
+Many-One  Size
+One-Many Saving Throws
+One-One  Lair
+	     |_Lair actions
+?One-One Armor Class Type
+***************
+Many-Many Languages 
+Many-Many Traits    
+Many-Many Actions
+Many-Many Reactions  
+Many-Many Legendary Actions
+Many-Many Environment
+One-Many Saving Throws
+____________________
+Many-Many Damage_types
+bridge    Damage Vulnerability
+bridge    Damage Resistance
+bridge    Damage Immunity
+_______________________
+Many-Many Conditions
+Bridge    Condition Immunity
+_______________________
+Many-Many Senses(distance on bridge)
+Many-Many Speed(distance on bridge)
+Many-Many Skills Prof
+****CALC:
+	Passive Perception

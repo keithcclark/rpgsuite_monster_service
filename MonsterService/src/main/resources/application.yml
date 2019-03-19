@@ -1,0 +1,18 @@
+spring:
+    application: 
+        name: creature-service
+    datasource:
+        url: ${JDBC_URL}
+        username: ${JDBC_USER}
+        password: ${JDBC_PASS}
+        driver-class-name: oracle.jdbc.driver.OracleDriver
+        platform: oracle
+    jpa:
+        database: ORACLE
+        show-sql: true
+        database-platform: org.hibernate.dialect.Oracle10gDialect
+        hibernate:
+            ddl-auto: none
+server:
+    port: 3434
+    
