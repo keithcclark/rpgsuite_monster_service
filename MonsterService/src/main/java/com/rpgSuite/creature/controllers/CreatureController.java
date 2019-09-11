@@ -4,7 +4,8 @@ import java.util.Set;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,18 +23,18 @@ import com.rpgSuite.creature.services.CreatureService;
 @CrossOrigin
 @RequestMapping(value = "/creatures")
 public class CreatureController {
-	Logger log = Logger.getLogger(CreatureController.class);
+	Logger log = LoggerFactory.getLogger(CreatureController.class);
 	@Autowired
 	private CreatureService creatureService;
 
 	@GetMapping(value = "{id}")
 	public Creature getCreatureById(@PathVariable("id") int id) {
+		log.debug("Get monster:" + id);
 		return creatureService.getCreatureById(id);
 	}
 	
 	@GetMapping(value = "/name")
 	public Set<Creature> searchByName(HttpServletRequest req) {
-		log.trace("recieved search term: "+ req.getParameter("name"));
 		return creatureService.searchByName(req.getParameter("name"));
 	}
 

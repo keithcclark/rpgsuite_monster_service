@@ -15,4 +15,11 @@ spring:
             ddl-auto: none
 server:
     port: 3434
-    
+
+logging:
+  file: /logs/Application.log
+  level:
+    com.rpgSuite.creature: DEBUG
+  pattern:
+    file: "%d %-5level [%thread] %logger : %msg%n"
+  
