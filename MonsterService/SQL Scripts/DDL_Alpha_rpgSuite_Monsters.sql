@@ -199,7 +199,10 @@ create sequence saveid_seq start with 1;
 @DML_rpgSuite_5e_Environments.sql;
 @DML_rpgSuite_5e_Languages.sql
 @DML_rpgSuite_5e_MonsterTypes.sql;
+@DML_rpgSuite_5e_SubType.sql;
 @DML_rpgSuite_5e_Senses.sql;
 @DML_rpgSuite_5e_Size.sql;
 @DML_rpgSuite_5e_Skills.sql;
 @DML_rpgSuite_5e_Speeds.sql;
+
+select 'Alpha Complete' from dual;
